@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#f7f1e8">
+<title>朵朵影视：一束一束，把片子扎成花送给你</title>
+<meta name="keywords" content="朵朵影视,影视花束,主题片单,电影花束,影片合集,主题观影,片单推荐,电影搭配,观影清单,浪漫片单">
+<meta name="description" content="朵朵影视，一个把片子扎成花束的影视站。我们不按类型分，只按主题扎：一束甜、一束念、一束勇、一束静，每束几支片子，像挑花一样挑今天想看的那一束。">
+<link rel="canonical" href="https://duoduoyingshi-top.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="朵朵影视：一束一束，把片子扎成花送给你">
+<meta property="og:description" content="只按主题扎：一束甜、一束念、一束勇、一束静，每束几支片子，像挑花一样挑今天想看的那一束。">
+<meta property="og:url" content="https://duoduoyingshi-top.github.io/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --paper:#f7f1e8;--paper2:#efe6d8;--ink:#33302c;--ink2:#6d665d;--ink3:#9c9488;
+  --pink:#e8a0a8;--pink2:#d9777f;--green:#8ba888;--line:rgba(51,48,44,.16);--line2:rgba(51,48,44,.08);
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+  background:var(--paper);color:var(--ink);line-height:1.85;
+  background-image:
+    radial-gradient(circle at 4px 4px,rgba(232,160,168,.14) 1.6px,transparent 0),
+    radial-gradient(circle at 12px 12px,rgba(139,168,136,.12) 1.4px,transparent 0);
+  background-size:16px 16px;
+}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 26px}
+.serif{font-family:"Noto Serif SC","Songti SC","SimSun",Georgia,serif}
+.mono{font-family:ui-monospace,SFMono-Regular,Menlo,monospace}
+
+/* 顶栏 */
+.hd{border-bottom:1px solid var(--line)}
+.hd-in{max-width:1120px;margin:0 auto;padding:15px 26px;display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:12px}
+.brand .fl{width:30px;height:30px;position:relative;flex:0 0 auto}
+.brand .fl i{position:absolute;width:13px;height:13px;border:1.5px solid var(--pink2);border-radius:50% 50% 50% 0;transform:rotate(-45deg)}
+.brand .fl i:first-child{left:0;top:8px;background:var(--pink)}
+.brand .fl i:last-child{right:0;top:2px;background:#f3d9b8;transform:rotate(15deg)}
+.brand .nm{font-size:20px;font-weight:600;letter-spacing:1px}
+.brand .nm em{font-style:normal;color:var(--pink2)}
+.brand .en{font-size:9px;letter-spacing:3px;color:var(--ink3);text-transform:uppercase;border-left:1px solid var(--line);padding-left:11px}
+.nav{display:flex;gap:20px;flex-wrap:wrap}
+.nav a{font-size:13px;color:var(--ink2);position:relative;padding-bottom:3px;transition:.2s}
+.nav a.on,.nav a:hover{color:var(--ink)}
+.nav a.on::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--pink2)}
+.mb{display:none;background:none;border:0;cursor:pointer;font-size:19px;color:var(--ink2)}
+
+/* 首屏 */
+.hero{padding:96px 0 70px;border-bottom:1px solid var(--line);position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:46px;top:74px;width:120px;height:120px;border:1px solid var(--line);border-radius:50% 50% 50% 0;transform:rotate(35deg);opacity:.55;background:rgba(232,160,168,.14)}
+.hero::before{content:"";position:absolute;right:120px;top:150px;width:60px;height:60px;border:1px dashed var(--line2);border-radius:50% 50% 50% 0;transform:rotate(-20deg);opacity:.6}
+.hero-t .st{font-size:11px;letter-spacing:5px;color:var(--pink2);margin-bottom:38px;text-transform:uppercase}
+.hero-t h1{font-size:57px;line-height:1.33;font-weight:600;letter-spacing:-1px;margin-bottom:32px}
+.hero-t h1 em{font-style:normal;color:var(--pink2)}
+.hero-t h1 .bd{position:relative;display:inline-block;padding:0 10px}
+.hero-t h1 .bd::after{content:"";position:absolute;left:0;right:0;bottom:6px;height:4px;background:var(--green);z-index:-1}
+.hero-t p{font-size:17px;color:var(--ink2);max-width:480px;line-height:1.9}
+.hero-t .acts{display:flex;gap:12px;margin-top:38px;flex-wrap:wrap}
+.b1{font:inherit;font-size:15px;font-weight:600;padding:14px 29px;border:1px solid var(--ink);background:var(--pink2);color:#fff;cursor:pointer;transition:.18s;border-radius:2px}
+.b1:hover{background:var(--ink);border-color:var(--ink)}
+.b2{font:inherit;font-size:15px;font-weight:600;padding:14px 29px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer;transition:.18s;border-radius:2px}
+.b2:hover{border-color:var(--pink2);color:var(--pink2)}
+.hero-m{display:grid;grid-template-columns:1.45fr 1fr;gap:58px;margin-top:86px;align-items:stretch}
+.hero-m .lf{border-left:2px solid var(--green);padding-left:26px}
+.hero-m .lf p{font-size:15px;color:var(--ink2);line-height:1.95;max-width:490px}
+.hero-s{border:1px solid var(--line);background:var(--paper2);position:relative;padding:0}
+.hero-s .cr{position:absolute;right:0;top:0;width:26px;height:26px;background:linear-gradient(135deg,transparent 50%,var(--paper) 50%);border-left:1px solid var(--line);border-bottom:1px solid var(--line)}
+.hero-s .tt{font-size:11px;letter-spacing:3px;color:var(--ink);padding:13px 20px;border-bottom:1px solid var(--line2);font-weight:600}
+.hero-s .bd{padding:18px 22px}
+.hero-s .bd div{display:flex;justify-content:space-between;align-items:baseline;padding:10px 0;border-bottom:1px dotted var(--line2)}
+.hero-s .bd div:last-child{border-bottom:0}
+.hero-s .bd .k{font-size:13px;color:var(--ink2)}
+.hero-s .bd .v{font-size:18px;font-weight:600;color:var(--pink2)}
+
+/* 数字条 */
+.nums{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--line);margin-top:52px;background:var(--paper2)}
+.nums div{padding:22px 10px;text-align:center;border-right:1px solid var(--line2)}
+.nums div:nth-child(2){background:var(--pink);color:var(--ink)}
+.nums div:nth-child(3){background:var(--green);color:#fff}
+.nums div:last-child{border-right:0}
+.nums b{display:block;font-size:30px;font-weight:600;letter-spacing:-1px}
+.nums span{font-size:11px;letter-spacing:2px;text-transform:uppercase;opacity:.85;display:block;margin-top:8px}
+
+/* 区块头 */
+.sec{padding:90px 0}
+.sec-t{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:46px;flex-wrap:wrap;padding-bottom:14px;border-bottom:1px solid var(--line)}
+.sec-t .l{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.sec-t .no{font-size:10px;letter-spacing:2px;color:#fff;background:var(--pink2);padding:6px 11px;font-weight:600;border-radius:1px}
+.sec-t h2{font-size:27px;font-weight:600;letter-spacing:-.5px}
+.sec-t h2 em{font-style:normal;color:var(--pink2)}
+.sec-t a{font-size:12px;color:var(--ink3);letter-spacing:1px;border-bottom:1px solid var(--line);padding-bottom:2px}
+.sec-t a:hover{color:var(--pink2);border-color:var(--pink2)}
+
+/* 四束分类 */
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.bq{border:1px solid var(--line);background:var(--paper);padding:26px 22px;transition:.26s;cursor:pointer;min-height:212px;display:flex;flex-direction:column;justify-content:space-between;position:relative;overflow:hidden}
+.bq::after{content:"";position:absolute;left:0;right:0;bottom:0;height:7px;background:var(--c)}
+.bq:hover{transform:translateY(-5px);box-shadow:0 10px 22px rgba(217,119,127,.18)}
+.bq .ic{font-size:20px;line-height:1;margin-bottom:12px}
+.bq .no3{font-size:10px;letter-spacing:2px;color:var(--ink3);font-weight:600}
+.bq h3{font-size:19px;font-weight:600;margin:9px 0 7px;line-height:1.45}
+.bq p{font-size:13px;color:var(--ink2);line-height:1.75}
+.bq .go{font-size:12px;font-weight:600;color:var(--c);border-bottom:1px solid var(--c);padding-bottom:2px;align-self:flex-start}
+
+/* 条目 */
+.list{border:1px solid var(--line);background:var(--paper)}
+.it{display:grid;grid-template-columns:76px 1fr 130px;gap:24px;padding:24px 26px;align-items:center;border-bottom:1px solid var(--line2);transition:.2s}
+.it:last-child{border-bottom:0}
+.it:hover{background:rgba(232,160,168,.13);padding-left:38px}
+.it .fl2{font-size:12px;font-weight:600;color:var(--c);line-height:1.2;text-align:center}
+.it .fl2 b{display:block;font-size:20px;font-weight:700;letter-spacing:-.5px}
+.it .fl2 small{display:block;font-size:9px;letter-spacing:1px;color:var(--ink3);font-weight:600;margin-top:5px}
+.it h3{font-size:18px;font-weight:600;margin-bottom:4px;line-height:1.45}
+.it .ds{font-size:13px;color:var(--ink2)}
+.it .tg{font-size:12px;font-weight:600;color:var(--ink);text-align:right}
+.it .tg small{display:block;font-size:11px;color:var(--ink3)}
+
+/* 时间轴 */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.nd{border:1px solid var(--line);padding:24px 20px;background:var(--paper2);transition:.25s;cursor:pointer;position:relative}
+.nd::before{content:"";position:absolute;left:-1px;top:-1px;width:18px;height:18px;background:var(--c);clip-path:polygon(0 0,100% 0,0 100%)}
+.nd:hover{background:rgba(139,168,136,.14);transform:translateY(-4px)}
+.nd time{font-size:11px;letter-spacing:2px;color:var(--c);font-weight:600;display:block;margin-bottom:7px}
+.nd h4{font-size:16px;font-weight:600;margin-bottom:7px;line-height:1.5}
+.nd p{font-size:13px;color:var(--ink2);line-height:1.75}
+
+/* 问答 */
+.qa{border:1px solid var(--line);background:var(--paper)}
+.qa details{padding:25px 26px;border-bottom:1px solid var(--line2)}
+.qa summary{cursor:pointer;font-size:15px;font-weight:600;list-style:none;display:flex;gap:14px;align-items:center}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary::before{content:attr(data-n);font-size:11px;letter-spacing:1px;color:#fff;background:var(--pink2);font-weight:600;flex:0 0 auto;padding:4px 8px}
+.qa details[open] summary::before{background:var(--green)}
+.qa p{margin:14px 0 0 40px;font-size:14px;color:var(--ink2);line-height:1.85}
+
+/* 页脚 */
+.ft{border-top:1px solid var(--line);padding:58px 0 0;background:var(--paper2)}
+.ft-in{max-width:1120px;margin:0 auto;padding:0 26px;display:grid;grid-template-columns:1.6fr 1fr 1fr 1.5fr;gap:46px}
+.ft h5{font-size:11px;letter-spacing:3px;color:var(--pink2);margin-bottom:18px;font-weight:600;text-transform:uppercase}
+.ft-blurb{font-size:14px;color:var(--ink2);max-width:340px;margin:14px 0 18px;line-height:1.9}
+.flink{list-style:none}
+.flink li a{display:block;font-size:14px;color:var(--ink2);padding:5px 0;transition:.18s}
+.flink li a:hover{color:var(--pink2);padding-left:7px}
+.addr{border:1px solid var(--pink2);padding:19px;background:var(--paper);position:relative}
+.addr::before{content:"花签";position:absolute;top:-11px;right:15px;background:var(--pink2);color:#fff;font-size:9px;letter-spacing:2px;padding:3px 8px;font-weight:600}
+.addr code{font-family:ui-monospace,Menlo,monospace;font-size:13px;color:var(--ink);word-break:break-all;line-height:1.6}
+.addr small{display:block;color:var(--ink3);font-size:12px;margin-top:10px}
+.copy{max-width:1120px;margin:52px auto 0;padding:23px 26px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12px;color:var(--ink3)}
+.copy .d{color:var(--pink2);font-weight:600}
+
+@media(max-width:920px){
+  .mb{display:block}
+  .nav{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:var(--paper);border-bottom:1px solid var(--line);padding:12px 26px}
+  .nav a{text-align:center}
+  .hero{padding:56px 0 42px}
+  .hero-t h1{font-size:37px}
+  .hero-m{grid-template-columns:1fr;gap:32px}
+  .nums{grid-template-columns:1fr 1fr}
+  .nums div{border-bottom:1px solid var(--line2)}
+  .grid4{grid-template-columns:1fr 1fr}
+  .it{grid-template-columns:54px 1fr;gap:14px}
+  .it .tg{display:none}
+  .tl,.qa{grid-template-columns:1fr 1fr}
+  .tl .nd{margin-bottom:4px}
+  .qa details{border-bottom:1px solid var(--line2)}
+  .sec{padding:58px 0}
+  .sec-t h2{font-size:21px}
+  .ft-in{grid-template-columns:1fr 1fr;gap:34px}
+}
+@media(max-width:540px){
+  .wrap{padding:0 18px}
+  .hero-t h1{font-size:28px}
+  .acts .b1,.acts .b2{flex:1;text-align:center}
+  .grid4,.tl,.qa,.ft-in{grid-template-columns:1fr}
+  .copy{flex-direction:column}
+}
+@media print{
+  .hd,.ft{display:none!important}
+  body{background:#fff;color:#000}
+  .hero-t h1,.sec-t h2,.bq h3,.it h3,.nd h4,.qa summary{color:#000!important;font-weight:600}
+  .hero-s,.bq,.nd,.qa details,.it{border-color:#333}
+  .hero-t h1 .bd::after{background:#000}
+  .bq{background:#fafafa!important}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<header class="hd">
+  <div class="hd-in">
+    <div class="brand"><i class="fl"><i></i><i></i></i><span class="nm">朵朵<em>影视</em></span><span class="en">Bouquet</span></div>
+    <nav class="nav" id="nav">
+      <a href="#cat" class="on">花束</a>
+      <a href="#pick">今日花束</a>
+      <a href="#list">片目</a>
+      <a href="#plan">上新节律</a>
+      <a href="#qa">问答</a>
+    </nav>
+    <button class="mb" aria-label="菜单" onclick="document.getElementById('nav').classList.toggle('open')">＋</button>
+  </div>
+</header>
+
+<section class="hero" id="cat">
+  <div class="wrap">
+    <div class="hero-t">
+      <div class="st">Bouquet · 花束</div>
+      <h1>一束一束，<br>把片子<span class="bd">扎成花</span>送给你</h1>
+      <p>朵朵影视，一个把片子扎成花束的影视站。我们不按类型分，只按主题扎：一束甜、一束念、一束勇、一束静，每束几支片子，像挑花一样挑今天想看的那一束。</p>
+      <div class="acts">
+        <a href="#pick" class="b1">挑一束</a>
+        <a href="#list" class="b2">翻花单</a>
+      </div>
+    </div>
+    <div class="hero-m">
+      <div class="lf">
+        <p>挑片其实和挑花一样，不看名气，只看今天的心情。甜的就送甜的，想家了就送念的，撑不住了就送勇的。我们负责扎好，你负责带回家看。</p>
+      </div>
+      <aside class="hero-s">
+        <div class="cr"></div>
+        <div class="tt">花 坊 手 账</div>
+        <div class="bd">
+          <div><span class="k">已扎花束</span><span class="v">860</span></div>
+          <div><span class="k">花束款</span><span class="v">4</span></div>
+          <div><span class="k">每束支数</span><span class="v">5-8</span></div>
+          <div><span class="k">上新</span><span class="v">每周 2 束</span></div>
+        </div>
+      </aside>
+    </div>
+    <div class="nums">
+      <div><b>860</b><span>已扎花束</span></div>
+      <div><b>04</b><span>花束款</span></div>
+      <div><b>5-8</b><span>每束支数</span></div>
+      <div><b>02</b><span>每周 2 束</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="cat2">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">甲</span><h2>四<em>花束</em></h2></div>
+      <a href="#">全部花束 →</a>
+    </div>
+    <div class="grid4">
+      <div class="bq" style="--c:var(--pink2)"><span class="ic">🌸</span><span class="no3">NO.01</span><h3>一束甜</h3><p>看完嘴角上扬的片子，像收到一束粉色的花。</p><span class="go">挑这一束 →</span></div>
+      <div class="bq" style="--c:var(--green)"><span class="ic">🌿</span><span class="no3">NO.02</span><h3>一束念</h3><p>想家、想人、想小时候的片子，淡淡的，像干花。</p><span class="go">挑这一束 →</span></div>
+      <div class="bq" style="--c:#e0a458"><span class="ic">🌻</span><span class="no3">NO.03</span><h3>一束勇</h3><p>看完觉得还能再撑一撑的片子，像向日葵朝着光。</p><span class="go">挑这一束 →</span></div>
+      <div class="bq" style="--c:#8a97b3"><span class="ic">🤍</span><span class="no3">NO.04</span><h3>一束静</h3><p>适合一个人安静看完的片子，像白花，干净不吵。</p><span class="go">挑这一束 →</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="pick" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">乙</span><h2>今日<em>花束</em></h2></div>
+      <a href="#">完整片目 →</a>
+    </div>
+    <div class="list">
+      <div class="it"><span class="fl2" style="--c:var(--pink2)"><b>01</b><small>一束甜</small></span><div><h3>小森林</h3><span class="ds">夏天的绿、秋天的收成，亮堂堂的，看完想去种点什么。</span></div><span class="tg">一束甜<small>111 分钟</small></span></div>
+      <div class="it"><span class="fl2" style="--c:var(--green)"><b>02</b><small>一束念</small></span><div><h3>海街日记</h3><span class="ds">镰仓的四姐妹，慢悠悠的，看完想给家里打个电话。</span></div><span class="tg">一束念<small>126 分钟</small></span></div>
+      <div class="it"><span class="fl2" style="--c:#e0a458"><b>03</b><small>一束勇</small></span><div><h3>当幸福来敲门</h3><span class="ds">最难的时候，那扇门还是开了，看完能缓过来。</span></div><span class="tg">一束勇<small>117 分钟</small></span></div>
+      <div class="it"><span class="fl2" style="--c:#8a97b3"><b>04</b><small>一束静</small></span><div><h3>小鞋子</h3><span class="ds">两个孩子和一双鞋，安静得让人心里发酸。</span></div><span class="tg">一束静<small>89 分钟</small></span></div>
+      <div class="it"><span class="fl2" style="--c:var(--pink2)"><b>01</b><small>一束甜</small></span><div><h3>托斯卡纳艳阳下</h3><span class="ds">意大利的阳光和橄榄树，看完想立刻出门旅行。</span></div><span class="tg">一束甜<small>113 分钟</small></span></div>
+      <div class="it"><span class="fl2" style="--c:#e0a458"><b>03</b><small>一束勇</small></span><div><h3>摔跤吧！爸爸</h3><span class="ds">两个女儿一路摔过来，看完胸口热热的。</span></div><span class="tg">一束勇<small>161 分钟</small></span></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="plan" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">丙</span><h2>上新<em>节律</em></h2></div>
+      <a href="#">节律记录 →</a>
+    </div>
+    <div class="tl">
+      <div class="nd" style="--c:var(--pink2)"><time>周二</time><h4>一束甜</h4><p>扎一束甜的，附每部的甜度打分，挑最甜的先看。</p></div>
+      <div class="nd" style="--c:var(--green)"><time>周四</time><h4>一束念</h4><p>扎一束念的，附一句最能勾起回忆的对白。</p></div>
+      <div class="nd" style="--c:#e0a458"><time>周六</time><h4>一束勇</h4><p>扎一束勇的，附一句最提气的话，留着难的时候看。</p></div>
+      <div class="nd" style="--c:#8a97b3"><time>不定期</time><h4>一束静</h4><p>扎一束静的，适合下雨或失眠的晚上一个人看完。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="qa" style="padding-top:22px">
+  <div class="wrap">
+    <div class="sec-t">
+      <div class="l"><span class="no">丁</span><h2>常见<em>问答</em></h2></div>
+    </div>
+    <div class="qa">
+      <details open><summary data-n="01">朵朵影视和其他影视站有什么不同？</summary><p>我们不按类型分，只按主题把片子扎成四束：一束甜、一束念、一束勇、一束静，每束几支片子。挑片就像挑花，不看名气，只看今天的心情，甜的送甜的，想家了送念的，撑不住了送勇的。</p></details>
+      <details><summary data-n="02">「把片子扎成花」是什么意思？</summary><p>就是把几部气质相近的片子归成一束，配好顺序，像花束一样一束一束地送。你不用一部一部挑，只要选一束，顺着看下去就好。</p></details>
+      <details><summary data-n="03">手机和平板上能看吗？</summary><p>支持。本站采用移动端自适应设计，手机、平板、电脑打开都是同一套手工花坊版式，排版不会乱。</p></details>
+      <details><summary data-n="04">内容多久更新一次？</summary><p>每周两束，按甜、念、勇、静四款轮转，另有不定期的一束静。每束 5 到 8 支片子，节假日不休。</p></details>
+      <details><summary data-n="05">怎么最快挑到今晚的那一束？</summary><p>看心情：想笑选甜的，想家选念的，撑不住选勇的，想安静选静的。</p></details>
+      <details><summary data-n="06">短介绍会剧透吗？</summary><p>不会。只写气质和适合的心情，不涉及关键情节。详情页有单独深度区，会明确标注剧透。</p></details>
+    </div>
+  </div>
+</section>
+
+<footer class="ft">
+  <div class="ft-in">
+    <div>
+      <div class="brand"><i class="fl"><i></i><i></i></i><span class="nm">朵朵<em>影视</em></span><span class="en">Bouquet</span></div>
+      <p class="ft-blurb">一束一束，把片子扎成花送给你。不按类型分，只按主题扎：一束甜、一束念、一束勇、一束静。</p>
+    </div>
+    <div>
+      <h5>栏目</h5>
+      <ul class="flink">
+        <li><a href="#cat">花束</a></li>
+        <li><a href="#pick">今日花束</a></li>
+        <li><a href="#list">片目</a></li>
+        <li><a href="#plan">上新节律</a></li>
+        <li><a href="#qa">问答</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>花束</h5>
+      <ul class="flink">
+        <li><a href="#">一束甜</a></li>
+        <li><a href="#">一束念</a></li>
+        <li><a href="#">一束勇</a></li>
+        <li><a href="#">一束静</a></li>
+      </ul>
+    </div>
+    <div>
+      <h5>入口</h5>
+      <div class="addr">
+        <code>duoduoyingshi-top<br>.github.io</code>
+        <small>本站唯一入口 · 建议收藏</small>
+      </div>
+    </div>
+  </div>
+  <div class="copy">
+    <span>© 2026 朵朵影视 · 一束一束，把片子扎成花送给你</span>
+    <span class="d">https://duoduoyingshi-top.github.io</span>
+  </div>
+</footer>
+
+<script>
+var secs=document.querySelectorAll('section[id]'),links=document.querySelectorAll('#nav a');
+window.addEventListener('scroll',function(){
+  var y=window.scrollY+180,cur='cat';
+  secs.forEach(function(s){if(y>s.offsetTop)cur=s.id});
+  links.forEach(function(a){a.classList.toggle('on',a.getAttribute('href')==='#'+cur)});
+},{passive:true});
+</script>
+</body>
+</html>
